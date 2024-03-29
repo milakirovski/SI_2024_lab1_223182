@@ -1,0 +1,37 @@
+/////////////////////////////// Commit logs master //////////////////////////////////////////
+master commit logs:
+commit d2c0b74a0662b9afbff87f4cfe062095f811c2c7 (HEAD -> master, origin/master, origin/bug2, bug2)
+Author: Mila Kirovski <kirovski.mila@gmail.com>
+Date:   Fri Mar 29 21:24:45 2024 +0100
+
+    Call method makeBigStringFrom in main class
+
+commit 1683e6859c98dbad4caf27d2c750e0c6b42fa641
+Author: Mila Kirovski <kirovski.mila@gmail.com>
+Date:   Fri Mar 29 21:22:13 2024 +0100
+
+    Fix wrong condition in makeBigStringFrom
+
+commit a856bbfa05b525dbb3e4a99f3290cb5ff36b1426 (origin/bug1, bug1)
+Author: Mila Kirovski <kirovski.mila@gmail.com>
+Date:   Fri Mar 29 21:00:16 2024 +0100
+
+    Call method filterOddLengthStrings in main class
+
+commit 73129e2939264dd99ea1615031f07dc762053840
+Author: Mila Kirovski <kirovski.mila@gmail.com>
+Date:   Fri Mar 29 20:31:17 2024 +0100
+
+    Fix wrong condition in filterOddLengthStrings
+
+commit 745f179c88c0925e202c056af3ef880db7058369
+Author: Mila Kirovski <kirovski.mila@gmail.com>
+Date:   Fri Mar 29 20:15:07 2024 +0100
+
+    Add starter code
+
+commit 8fe4b78cf7aced18ae4264ed046709ed02474ee3
+Author: Mila Kirovski <kirovski.mila@gmail.com>
+Date:   Fri Mar 29 19:54:52 2024 +0100
+
+    Inital commit

@@ -1,0 +1,49 @@
+Документација за LAB1 SI_2024:
+
+4. git init = создава нов репозиториум додавајки фолдер .git, на веќе постоечки проект или нов
+
+5. git remote add origin https://github.com/milakirovski/SI_2024_lab1_223182.git = Git создава референца до remote репозиториумот со име oigin и дадената URL-адреса.
+
+6 i 7. git add README.md = го поставува фајлот README.md во staged фаза, спремни се неговите промени да бидат комитнати со следниот комит.
+   git commit -m "Inital commit" = промените од staged ги зачувува и ги прикажува во репото како верзија, истовремено и прикажува порака која е пожелно да се стави за да се описе промената/промените кои сме ги направиле во тој комит.
+8. git push origin master = се креира и се додаваат комитите на remote гранката origin/master
+9. git branch bug1 = се создава гранка bug1 
+   git branch bug2 = се создава гранка bug2
+10. git checkout bug1 = се префрламе на гранката bug1
+11.  Поправка на кодот на гранката bug1 на фајлот SILab1_1.java
+     git add SILab1_1.java = од modified vo staged, преминува во staged
+     git commit -m "Fix wrong condition in filterOddLengthStrings" = ги комитуваме промените
+12. Поправка на кодот на гранката bug2 на фајлот SILab1_2.java
+    git checkout bug2 = се префрламе на гранката bug2
+13. git add SILab1_2.java = од modified vo staged, преминува во staged
+    git commit -m "Fix wrong condition in makeBigStringFrom" = ги комитуваме промените
+14. git checkout bug1 = се префрламе на гранката bug1 
+
+15. Ја додаваме командата System.out.println(SILab1_1.filterOddLengthStrings(list)); во SI1Main.java
+    git add SILab1Main.java = od modifed vo staged
+    git commit -m "Call method filterOddLengthStrings in main class" = commit на проментата
+
+16. git checkout bug2 = се префрламе на гранката bug2
+Ја додаваме командата System.out.println(SILab1_2.makeBigStringFrom(list)); во SI1Main.java
+17. git add SILab1Main.java = od modifed vo staged
+    git commit -m "Call method makeBigStringFrom in main class" = commit на проментата
+
+18. git checkout bug1 = се префрла на гранката bug1 покажувачот HEAD
+    git push origin bug1 = се креира и се предаваат комитите од локалната гранка bug1 на ремоте гранката origin/bug1
+    git checkout bug2 = се префрла на гранката bug2 покажувачот HEAD
+    git push origin bug2 = се креира и се предаваат комитите од локалната гранка bug2 на ремоте гранката origin/bug2
+
+19. git checkout master = се префрла на мастер гранката покажувачот HEAD
+20. git merge bug1 = гранката bug1 се спојува кон гранката master
+    -Нема конфликт при спојувањето
+    -FastForward стратегија на спојување, само една гранка има комити кои ги нема другата и тие само ке префрлаат на другата гранка, сигурно во оваа ситуација не се појавува конфликт. Во слуцајов гранката bug1 има комити кои ги нема гранката мастер и тие само ке се префрлата од bug1 гранката  на гранката мастер.
+21. git push origin master = синхронизација на master i origin/master гранките
+22. git checkout bug2 = се префрла на гранката bug2 покажувачот HEAD 
+23. git rebase master = се спојува гранката bug2 кон гранката мастер, но rebase ни овозможува да го одбегнеме MERGE COMMIT-от, не ја загадува историјата на комитите.
+	-Имам конфликт
+	-Конфликтот го разрешив така што ги отстранив специјалните караткери кои означуваат каде е настатат конфликтот и ги оставив двата повика на функциите.
+	- Рекурзивна статегија на поврзување, ДВЕТЕ гранки кои се спојуваат имаат комити што не се знаеднички, во случајов мастер има комити кои ги нема bug2 и bug2 има комити кои ги нема мастер. 
+24. git checkout master = се префрла на гранката master покажувачот HEAD
+25. git merge bug2 = гранката bug2 се спојува кон гранката master
+    -Нема конфликт при спојувањето
+    -FastForward стратегија на спојување = само една гранка има комити кои ги нема другата и тие само ќе префрлаат на другата гранка, сигурно во оваа ситуација не се појавува конфликт. Во случајов гранката bug2 има комити кои ги нема гранката мастер и тие само ке се префрлата од bug2 гранката на гранката мастер.
